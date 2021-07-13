@@ -1,17 +1,17 @@
 
-#Node.js 설치 이유
+# Node.js 설치 이유
 
 npm, npx를 사용하기 위해서
 
-##npx create-react-app blog의 의미
+## npx create-react-app blog의 의미
 
 blog라는 이름의 react app과 폴더를 자동으로 생성해줌
 
-##npm start의 의미
+## npm start의 의미
 
 브라우저에 내가 만든 react app을 띄울 수 있음
 
-
+-------------------------------------------------
 
 
 # Getting Started with Create React App
