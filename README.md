@@ -8,7 +8,7 @@ https://online.codingapple.com/course/react-basic/
 ## Part 1 : 블로그 제작 & 기초 문법
 - [X]  React 강의 OT : 왜 리액트가 필요한가
 - [X] 리액트 React 설치와 개발환경 셋팅 (2021 ver) 	
-- [ ] JSX를 이용해 HTML 페이지 제작해보는건 처음이겠죠
+- [X] JSX를 이용해 HTML 페이지 제작해보는건 처음이겠죠
 - [ ] 중요한 데이터는 변수말고 리액트 state로 만들랬죠	
 - [ ] 버튼에 기능개발을 해보자 & 리액트 state변경하는 법	
 - [ ] 숙제 해설 : 블로그 글 수정버튼 만들기	
