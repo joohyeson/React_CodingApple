@@ -1,4 +1,6 @@
 
+# 1-2강
+
 ![image](https://user-images.githubusercontent.com/68503845/125445872-95f24468-cfa8-418d-b6f1-994a5490233d.png)
 
 
@@ -43,5 +45,40 @@ static 파일들의 보관함(압축 x)
 설치한 라이브러리 목록
 
 자동으로 버전 등이 기록됨
+
+# 3강
+
+## JSX문법
+
+### 1) 태크에 class를 주고 싶으면?
+
+<div className="클래스명">
+
+App.js를 스타일링 해주려면 App.css에서 설정해주면 됨
+
+### 2) 리액트에서 데이터 바인딩 쉽게 하는 방법
+
+{변수명}, {함수()} 만으로 데이터를 가져올 수 있음
+
+이미지를 가져올 때에도 <img src= {logo}>로 편리하게 사용가능하다
+
+-> 귀찮으니까 className써서 css사용하는게 더 편함
+
+### 3) JSX에서 style속성을 바로 집어넣는 방법
+
+오브젝트 형식으로 넣어야함.
+
+style={스타일}
+
+style={{color: 'blue', fontSize : 30px}}
+
+font-size사용 불가능. camelCase를 사용하여야 한다. 
+ 
+## 리액트가 단순 HTML코딩보다 편리한 이유
+
+데이터바인딩이 쉽다! (같은 이유로 Vue, angular 등을 사용함)
+
+
+
 
 
