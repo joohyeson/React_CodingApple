@@ -50,7 +50,7 @@ static 파일들의 보관함(압축 x)
 
 ## JSX문법
 
-### 1) 태크에 class를 주고 싶으면?
+### 1) 태그에 class를 주고 싶으면?
 
 <div className="클래스명">
 
