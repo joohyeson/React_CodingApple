@@ -78,6 +78,28 @@ font-size사용 불가능. camelCase를 사용하여야 한다.
 
 데이터바인딩이 쉽다! (같은 이유로 Vue, angular 등을 사용함)
 
+# 4강
+
+## 리액트에서의 데이터 저장 방법 
+
+### 1) 변수에 삽입
+
+### 2) state에 삽입
+
+    step 1) 상단에 import {useState} from 'react';
+        // 리액트에 있는 내장 함수(useState) 하나를 쓰겠다는 의미
+
+    step 2) useState(데이터)
+        useState('남자 코트 추천'); //[a,b]라는 어레이가 생김.a=실제 데이터 내용 b=a의 내용을 변경(예전 ver.)
+        let [a,b]=useState('남자 코트 추천');//ES6 신문법
+
+## state의 장점
+
+웹이 App처럼 동작하게 만들고 싶어서 사용함. 
+useState를 사용하면 state가 변경되면 HTML이 자동으로 재렌더링이 된다. ( 그냥 변수는 새로고침이 필요함)
+잘 바뀌지 않는 내용들은 그냥 const, let으로 변수 만들어서 사용하면 됨
+
+
 
 
 
