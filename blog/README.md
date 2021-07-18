@@ -110,6 +110,36 @@ useState를 사용하면 state가 변경되면 HTML이 자동으로 재렌더링
         // state값을 그냥 변경할 수는 없다. 
 
 
+# 6강
+
+## onClick={함수()}
+
+    바로 실행된다는 의미이기 때문에 클릭 시 실행되게 하려면 소괄호를 빼줘야함
+
+## deep copy vs shallow copy
+
+    1) deep copy
+        var newArray = [...글제목];
+        newArray[0]='여자 코트 추천'
+
+    2) shallow copy(단순히 값 공유)
+        var newArray = 글제목;
+        newArray[0]='여자 코트 추천'
+
+
+## state 어레이 변경 방법
+
+    1) 하드코딩
+        function 제목변경() {
+            글제목변경(['여자 코트 추천', '강남 우동맛집', '파이썬 독학'])
+        }
+    
+    2) 개발자스럽게?
+        var newArray = [...글제목];
+        newArray[0]='여자 코트 추천'
+        글제목변경(newArray)
+           
+
 
 
 
