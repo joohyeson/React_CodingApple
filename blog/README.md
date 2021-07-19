@@ -138,6 +138,30 @@ useState를 사용하면 state가 변경되면 HTML이 자동으로 재렌더링
         var newArray = [...글제목];
         newArray[0]='여자 코트 추천'
         글제목변경(newArray)
+		
+# 7강 
+## React Component : 많은 div들을 한 단어로 줄이고 싶은 충동이 들 때
+
+## Component
+
+	긴 HTML을 깔끔하게 넣을 수 있는 문법을 제공하는 방법으로, HTML덩어리를 의미함
+	
+	=> div 지옥 탈출!
+
+### Component 사용 방법
+
+	1) function을 이용해서 함수 생성
+	2) 함수 안에 원하는 HTML 내용 삽입
+	3) 원하는 곳에서 <functionName></functionName>을 선언하면 사용가능
+	
+### Component의 특징
+	
+	1) 반복사용 되는 곳/자주 변경 되는 곳 등은 Component로 만드는 것이 좋음
+	2) 함수 문법처럼 긴 코드 축양이나 재사용, 혹은 기능별로 나눌 때 사용한다고 이해하면 됨
+
+### Component의 단점
+
+	1) App(){} 안에 있는 state를 사용하고 싶을 때에 바로 사용이 불가능하고, props라는 문법을 사용해서 전달해야만 사용할 수 있음
            
 
 
