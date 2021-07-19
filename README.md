@@ -12,7 +12,7 @@ https://online.codingapple.com/course/react-basic/
 - [X] 중요한 데이터는 변수말고 리액트 state로 만들랬죠	
 - [X] 버튼에 기능개발을 해보자 & 리액트 state변경하는 법	
 - [X] 숙제 해설 : 블로그 글 수정버튼 만들기	
-- [ ] React Component : 많은 div들을 한 단어로 줄이고 싶은 충동이 들 때		
+- [X] React Component : 많은 div들을 한 단어로 줄이고 싶은 충동이 들 때		
 - [ ] 클릭하면 동작하는 UI (모달창) 만드는 법		
 - [ ] map : 많은 div들을 반복문으로 줄이고 싶은 충동이 들 때	
 - [ ] props : 자식이 부모의 state를 가져다쓰고 싶을 땐 말하고 쓰셔야합니다		
