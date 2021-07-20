@@ -9,6 +9,7 @@ function App() {
   let [글제목, 글제목변경] = useState(['남자 코트 추천', '강남 우동맛집', '파이썬 독학']);//ES6 신문법
   let [좋아요, 좋아요변경] = useState(0);
   let [모달클릭, 모달클릭변경] = useState(false);
+  let [제목번호, 제목번호변경] = useState(0);
 
   function 제목변경() {
 
@@ -26,20 +27,24 @@ function App() {
       </div>
 
       {
-        글제목.map(function (a) {
+        글제목.map(function (a, i) {//i는 반복문이 돌 때마다 0,1,2순서대로 증가하는 변수
           return (<div className="list">
-            <h3>{a} <span onClick={() => { 좋아요변경(좋아요 + 1) }}>👍</span> {좋아요} </h3>
+            <h3 onClick={() => { 제목번호변경(i) }}>{a} <span onClick={() => { 좋아요변경(좋아요 + 1) }}>👍</span> {좋아요} </h3>
             <p>2월 17일 발행</p>
             <hr />{/* 실선 */}
           </div>)
         })
       }
 
+      <button onClick={() => { 제목번호변경(0) }}>버튼1</button>
+      <button onClick={() => { 제목번호변경(1) }}>버튼2</button>
+      <button onClick={() => { 제목번호변경(2) }}>버튼3</button>
+
       <button onClick={() => { 모달클릭변경(!모달클릭) }}>버튼</button>
 
       {
         모달클릭 === true
-          ? <Modal 글제목={글제목} />
+          ? <Modal 글제목={글제목} 제목번호={제목번호} />
           : null
       }
 
@@ -50,7 +55,7 @@ function App() {
 function Modal(props) {
   return (
     <div className="modal">
-      <h2>제목 {props.글제목[0]}</h2>
+      <h2>제목 {props.글제목[props.제목번호]}</h2>
       <p>날짜</p>
       <p>상세내용</p>
     </div>
