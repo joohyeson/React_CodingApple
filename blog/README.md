@@ -183,7 +183,41 @@ useState를 사용하면 state가 변경되면 HTML이 자동으로 재렌더링
          : null
       }
 
+# 9강 map : 많은 div들을 반복문으로 줄이고 싶은 충동이 들 때
 
+## 리액트 환경에서의 반복문
+
+    리액트에서는 HTML도 반복시킬 수 있다. JSX내의 중괄호에 for을 사용하지는 못하고, map함수를 사용하여야 함.
+    for문을 꼭 사용하고 싶다면 return 바깥에서 함수를 만든 후 가져와서 사용한다. 
+
+## map함수란?
+
+    array내의 모든 데이터에 똑같은 작업을 시켜주고 싶을 때 사용함. 
+    array.map(function(a)){
+        return a*2
+    }//어레이에 있던 각각의 값들에 2를 곱해주는 기능
+
+## for문을 꼭 쓰고 싶다면?
+
+    function App (){
+
+    function 반복된UI(){
+        var 어레이 = [];
+        for (var i = 0; i < 3; i++) {
+        어레이.push(<div>안녕</div>)
+        }
+        return 어레이
+    }
+    return (
+        <div>
+        HTML 잔뜩있는 곳
+        
+        { 반복된UI() }
+        </div>
+    )
+    }
+
+    
 
 
            

@@ -32,24 +32,17 @@ function App() {
       <div className="black-nav">
         <div>개발 Blog</div>
       </div>
-      <button onClick={제목변경}>버튼</button>
-      <div className="list">
-        <h3>{글제목[0]} <span onClick={() => { 좋아요변경(좋아요 + 1) }}>👍</span> {좋아요} </h3>
-        <p>2월 17일 발행</p>
-        <hr />{/* 실선 */}
-      </div>
 
-      <div className="list">
-        <h3>{글제목[1]}</h3>
-        <p>2월 17일 발행</p>
-        <hr />{/* 실선 */}
-      </div>
+      {
+        글제목.map(function (a) {
+          return (<div className="list">
+            <h3>{a} <span onClick={() => { 좋아요변경(좋아요 + 1) }}>👍</span> {좋아요} </h3>
+            <p>2월 17일 발행</p>
+            <hr />{/* 실선 */}
+          </div>)
+        })
+      }
 
-      <div className="list">
-        <h3>{글제목[2]}</h3>
-        <p>2월 17일 발행</p>
-        <hr />{/* 실선 */}
-      </div>
       <button onClick={모달플래그}>버튼</button>
 
       {
