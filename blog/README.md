@@ -267,6 +267,13 @@ useState를 사용하면 state가 변경되면 HTML이 자동으로 재렌더링
     <input onChange={ (e)=>{ 입력값변경(e.target.value) } />
 
 
+# 13강 input 다루기 2 : 블로그 글발행 기능 만들기
+
+현재는 DB나 서버와 연동이 되어있지 않기 때문에 영구 저장은 하지 못함. 단순하게 array에 추가해보는 연습이다. 
+
+
+
+
            
 
 

@@ -20,6 +20,13 @@ function App() {
     글제목변경(newArray)//동일한 자료형을 사용해야 함
   }
 
+  function 제목추가() {
+    let newArray = [...글제목];
+    newArray.push(a);
+    글제목변경(newArray)
+
+  }
+
   return (
 
     <div className="App">
@@ -37,7 +44,12 @@ function App() {
           </div>)
         })
       }
-      <input onChange={(e) => { SetA(e.target.value) }} />
+
+      <div className="publish">
+        <input onChange={(e) => { SetA(e.target.value) }} />
+        <button onClick={제목추가}>저장</button>
+      </div>
+
       <button onClick={() => { 모달클릭변경(!모달클릭) }}>창 열기</button>
 
       {
