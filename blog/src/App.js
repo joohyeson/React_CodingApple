@@ -11,6 +11,8 @@ function App() {
   let [모달클릭, 모달클릭변경] = useState(false);
   let [제목번호, 제목번호변경] = useState(0);
 
+  let [a, SetA] = useState('');
+
   function 제목변경() {
 
     var newArray = [...글제목];
@@ -35,12 +37,8 @@ function App() {
           </div>)
         })
       }
-
-      <button onClick={() => { 제목번호변경(0) }}>버튼1</button>
-      <button onClick={() => { 제목번호변경(1) }}>버튼2</button>
-      <button onClick={() => { 제목번호변경(2) }}>버튼3</button>
-
-      <button onClick={() => { 모달클릭변경(!모달클릭) }}>버튼</button>
+      <input onChange={(e) => { SetA(e.target.value) }} />
+      <button onClick={() => { 모달클릭변경(!모달클릭) }}>창 열기</button>
 
       {
         모달클릭 === true
