@@ -22,9 +22,9 @@ function App() {
 
   function 제목추가() {
     let newArray = [...글제목];
-    newArray.push(a);
+    newArray.unshift(a);//앞에 빈 array 한 칸이 추가됨
     글제목변경(newArray)
-
+    SetA('')
   }
 
   return (
@@ -46,7 +46,7 @@ function App() {
       }
 
       <div className="publish">
-        <input onChange={(e) => { SetA(e.target.value) }} />
+        <input value={a} onChange={(e) => { SetA(e.target.value) }} />
         <button onClick={제목추가}>저장</button>
       </div>
 
