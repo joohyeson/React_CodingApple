@@ -17,14 +17,6 @@ function App() {
     글제목변경(newArray)//동일한 자료형을 사용해야 함
   }
 
-  function 모달플래그() {
-    if (모달클릭 === true) {
-      모달클릭변경(false)
-    }
-    else {
-      모달클릭변경(true)
-    }
-  }
   return (
 
     <div className="App">
@@ -43,11 +35,11 @@ function App() {
         })
       }
 
-      <button onClick={모달플래그}>버튼</button>
+      <button onClick={() => { 모달클릭변경(!모달클릭) }}>버튼</button>
 
       {
         모달클릭 === true
-          ? <Modal />
+          ? <Modal 글제목={글제목} />
           : null
       }
 
@@ -55,10 +47,10 @@ function App() {
   );
 }
 
-function Modal() {
+function Modal(props) {
   return (
     <div className="modal">
-      <h2>제목</h2>
+      <h2>제목 {props.글제목[0]}</h2>
       <p>날짜</p>
       <p>상세내용</p>
     </div>
