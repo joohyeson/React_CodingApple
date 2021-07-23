@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import Navbar from 'react-bootstrap/Navbar'
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import { Button } from 'react-bootstrap';
+import { Navbar, Container, Nav, Button } from 'react-bootstrap';
+import { useState } from 'react';
+import shoesInfo from './data.js'
 
 function App() {
+
+  let [신발정보, 신발정보변경] = useState(shoesInfo);
+
   return (
     <div className="App">
       <Navbar bg="dark" variant="dark">
@@ -38,8 +40,9 @@ function App() {
         <div className="row">
           <div className="col-md-4">
             <img src="https://codingapple1.github.io/shop/shoes1.jpg" width="100%" />
-            <h4>상품명</h4>
-            <p>상품정보</p>
+            <h4>{shoesInfo[0].title}</h4>
+            <p>{shoesInfo[0].content}</p>
+            <p>{shoesInfo[0].price}</p>
           </div>
           <div className="col-md-4">
             <img src="https://codingapple1.github.io/shop/shoes2.jpg" width="100%" />
