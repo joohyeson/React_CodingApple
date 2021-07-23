@@ -39,9 +39,13 @@ function App() {
 
       <div className="container">
         <div className="row">
-          {shoes1()}
-          {shoes2()}
-          {shoes3()}
+          {
+            신발정보.map(function (object, index) {
+              return <ShowShoes number={shoesInfo[index]} />
+
+            })
+
+          }
         </div>
       </div>
 
@@ -49,39 +53,16 @@ function App() {
   );
 }
 
-function shoes1() {
+function ShowShoes(props) {
   return (
     <div className="col-md-4">
       <img src="https://codingapple1.github.io/shop/shoes1.jpg" width="100%" />
-      <h4>{shoesInfo[0].title}</h4>
-      <p>{shoesInfo[0].content}</p>
-      <p>{shoesInfo[0].price}</p>
+      <h4>{props.number.title}</h4>
+      <p>{props.number.content}</p>
+      <p>{props.number.price}</p>
     </div>
   )
 }
-
-function shoes2() {
-  return (
-    <div className="col-md-4">
-      <img src="https://codingapple1.github.io/shop/shoes2.jpg" width="100%" />
-      <h4>{shoesInfo[1].title}</h4>
-      <p>{shoesInfo[1].content}</p>
-      <p>{shoesInfo[1].price}</p>
-    </div>
-  )
-}
-
-function shoes3() {
-  return (
-    <div className="col-md-4">
-      <img src="https://codingapple1.github.io/shop/shoes3.jpg" width="100%" />
-      <h4>{shoesInfo[2].title}</h4>
-      <p>{shoesInfo[2].content}</p>
-      <p>{shoesInfo[2].price}</p>
-    </div>
-  )
-}
-
 
 
 export default App;
