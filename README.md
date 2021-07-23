@@ -22,10 +22,10 @@ https://online.codingapple.com/course/react-basic/
 - [ ] 	class를 이용한 옛날 옛적 React 문법		
 
 ## Part 2 : 쇼핑몰 프로젝트
-- [ ]  쇼핑몰 프로젝트 : 프로젝트 생성 & Bootstrap 설치	
-- [ ] 평화로운 쇼핑몰 레이아웃 디자인시간	
-- [ ] 코드가 넘나 길어진다면 import / export 사용해보기
-- [ ] 숙제 해설 : 상품목록 Component화 + 반복문	
+- [X]  쇼핑몰 프로젝트 : 프로젝트 생성 & Bootstrap 설치	
+- [X] 평화로운 쇼핑몰 레이아웃 디자인시간	
+- [X] 코드가 넘나 길어진다면 import / export 사용해보기
+- [X] 숙제 해설 : 상품목록 Component화 + 반복문	
 - [ ] React Router 1 : 셋팅과 기본 라우팅		
 - [ ] React Router 2 : Link, Switch, history 기능		
 - [ ] React Router 3 : URL 파라미터로 상세페이지 100개 만들기		
