@@ -41,10 +41,9 @@ function App() {
         <div className="row">
           {
             신발정보.map(function (object, index) {
-              return <ShowShoes number={shoesInfo[index]} />
+              return <ShowShoes shoes={object} i={index} />
 
             })
-
           }
         </div>
       </div>
@@ -56,10 +55,10 @@ function App() {
 function ShowShoes(props) {
   return (
     <div className="col-md-4">
-      <img src="https://codingapple1.github.io/shop/shoes1.jpg" width="100%" />
-      <h4>{props.number.title}</h4>
-      <p>{props.number.content}</p>
-      <p>{props.number.price}</p>
+      <img src={"https://codingapple1.github.io/shop/shoes" + (props.i + 1) + ".jpg"} width="100%" />
+      <h4>{props.shoes.title}</h4>
+      <p>{props.shoes.content}</p>
+      <p>{props.shoes.price}</p>
     </div>
   )
 }

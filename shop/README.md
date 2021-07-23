@@ -30,3 +30,11 @@
 	데이터를 불러올 수 있다. 
 
 export는 한 파일 당 한번만 사용할 수 있다. 만약 내보낼 변수가 많다면, export {변수1, 변수2}처럼 사용하면 여러개를 내보낼 수 있음. 
+
+
+
+# 4강
+
+## src 사이에 변수 참조하는 방법
+
+      <img src={"https://codingapple1.github.io/shop/shoes" + (props.i + 1) + ".jpg"} width="100%" />
