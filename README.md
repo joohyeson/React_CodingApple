@@ -4,8 +4,6 @@ https://online.codingapple.com/course/react-basic/
 
 코딩 애플의 리액트 강의를 들으며 직접 코딩해보기!
 
-
-
 ## Part 1 : 블로그 제작 & 기초 문법
 - [X]  React 강의 OT : 왜 리액트가 필요한가
 - [X] 리액트 React 설치와 개발환경 셋팅 (2021 ver) 	
