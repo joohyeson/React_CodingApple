@@ -69,3 +69,27 @@ export는 한 파일 당 한번만 사용할 수 있다. 만약 내보낼 변수
 ## exact의 기능
 
 	/경로와 정확히 일치하는 페이지만 보여줌.
+
+
+# 6강 React Router 2 : Link, Switch, history 기능
+
+## Link 태그
+
+	<Link to="/">Home</Link>
+	<Link to="/detail">Detail</Link>
+
+to라는 속성을 이용해서 경로를 적어주면 페이지 이동이 가능함.
+
+### history 태그
+
+	ex) 뒤로가기 기능
+	import { useHistory } from 'react-router-dom';
+	let history = useHistory();
+	<button onClick={()=>{ history.goBack() }} className="btn btn-danger">뒤로가기</button> 
+
+	ex) 커스텀 페이지로 이동
+	 <button onClick={()=>{ history.push('/') }} className="btn btn-danger">뒤로가기</button> 
+	 push()함수 사용하기
+
+## Switch 태그
+        여러개의 Route가 존재할 때 exact를 쓰지 않고도 하나의 Route만 보여주도록 하는 태그.
