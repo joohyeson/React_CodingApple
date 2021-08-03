@@ -38,3 +38,17 @@ export는 한 파일 당 한번만 사용할 수 있다. 만약 내보낼 변수
 ## src 사이에 변수 참조하는 방법
 
       <img src={"https://codingapple1.github.io/shop/shoes" + (props.i + 1) + ".jpg"} width="100%" />
+
+# 5강
+
+## React Router
+
+페이지 나누기(라우팅)= react-router-dom 라이브러리 이용
+
+	npm install react-router-dom
+
+## react-router-dom 초기 셋팅 방법
+
+## BrowserRouter Vs HashRouter
+
+	같은 기능이지만 해쉬 라우터는 라우팅을 안전하게 할 수 있게 도와줌. 
