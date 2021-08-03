@@ -4,9 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { BrowserRouter } from 'react-router-dom';//경로 설정이 없고 이름만 있으면 라이브러리 이름
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>//라우터 설정
+
   </React.StrictMode>,
   document.getElementById('root')
 );
