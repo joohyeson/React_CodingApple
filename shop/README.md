@@ -49,6 +49,23 @@ export는 한 파일 당 한번만 사용할 수 있다. 만약 내보낼 변수
 
 ## react-router-dom 초기 셋팅 방법
 
+	index.js에 react-router-dom라이브러리의 BrowserRouter import후, App 컴포넌트를 BrowserRouter로 감싼다. 
+
+	<BrowserRouter>
+      <App />
+    </BrowserRouter> 
+
 ## BrowserRouter Vs HashRouter
 
 	같은 기능이지만 해쉬 라우터는 라우팅을 안전하게 할 수 있게 도와줌. 
+
+	해쉬 라우터는 사이트 주소 뒤에 #이 붙는데 그 이후에 주소를 추가하기 때문에 실수로 존재하지 않는 페이지를 서버에 요청하는 등의 실수를 막아준다. 
+
+## Route를 만들어보자(페이지를 나누자.)
+
+	1) import { Link, Route, Switch } from 'react-router-dom';
+	2) <Route exact path="/어쩌구"> <Card/> </Route> 
+
+## exact의 기능
+
+	/경로와 정확히 일치하는 페이지만 보여줌.

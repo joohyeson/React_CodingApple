@@ -10,8 +10,7 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
-    </BrowserRouter>//라우터 설정
-
+    </BrowserRouter>  {/*라우터 설정*/}
   </React.StrictMode>,
   document.getElementById('root')
 );
