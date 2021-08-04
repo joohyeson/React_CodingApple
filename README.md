@@ -25,9 +25,9 @@ https://online.codingapple.com/course/react-basic/
 - [X] 평화로운 쇼핑몰 레이아웃 디자인시간	
 - [X] 코드가 넘나 길어진다면 import / export 사용해보기
 - [X] 숙제 해설 : 상품목록 Component화 + 반복문	
-- [ ] React Router 1 : 셋팅과 기본 라우팅		
-- [ ] React Router 2 : Link, Switch, history 기능		
-- [ ] React Router 3 : URL 파라미터로 상세페이지 100개 만들기		
+- [X] React Router 1 : 셋팅과 기본 라우팅		
+- [X] React Router 2 : Link, Switch, history 기능		
+- [X] React Router 3 : URL 파라미터로 상세페이지 100개 만들기		
 - [ ] styled-components를 이용한 class없는 CSS스타일링			
 - [ ] 아니면 CSS대신 SASS를 쓰자 (SASS 문법 10분 총정리)	
 - [ ] Lifecycle Hook (옛날사람) useEffect (요즘사람)		
