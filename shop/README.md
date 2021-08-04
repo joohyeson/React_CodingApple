@@ -93,3 +93,24 @@ to라는 속성을 이용해서 경로를 적어주면 페이지 이동이 가�
 
 ## Switch 태그
         여러개의 Route가 존재할 때 exact를 쓰지 않고도 하나의 Route만 보여주도록 하는 태그.
+
+
+# 7강 React Router 3 : URL 파라미터로 상세페이지 100개 만들기
+
+## Detail.js에서 사용할 props들을 App.js에서 사용하는 이유
+
+	상위->하위로 데이터를 가져오는 건 쉽지만 하위->상위로 보내는 것은 어렵기 때문에 상위 컴포넌트에서 데이터를 관리하는 것이 좋음
+
+## /detail/0, /detail/1 등 번호에 따라 상품을 보여주기
+
+	1) :id로 라우팅하기
+
+	<Route path="/detail/:id">{/*detail/뒤에 어떤 문자가 오더라도 detail컴포넌트로 이동*/}
+          <Detail shoesInfo={신발정보} />
+    </Route>
+
+	2) Detail.js에 파라미터 번호(:id)를 불러오기
+	import { useHistory, useParams } from 'react-router-dom';
+	let { id } = useParams();//:id자리에 사용자가 입력한 값
+
+

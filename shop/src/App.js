@@ -25,42 +25,36 @@ function App() {
       </Navbar>
 
 
-      <Switch>
-        <Route exact path="/">
-          <div className="jumbotron">
-            <br />
-            <h1>20% Seaon Off</h1>
-            <br />
-            <p>
-              This is a simple hero unit, a simple jumbotron-style component for calling
-              extra attention to featured content or information.
-            </p>
-            <br />
-            <p>
-              <Button variant="dark">Learn More</Button>{' '}
-            </p>
-            <br />
+      <Route exact path="/">
+        <div className="jumbotron">
+          <br />
+          <h1>20% Seaon Off</h1>
+          <br />
+          <p>
+            This is a simple hero unit, a simple jumbotron-style component for calling
+            extra attention to featured content or information.
+          </p>
+          <br />
+          <p>
+            <Button variant="dark">Learn More</Button>{' '}
+          </p>
+          <br />
+        </div>
+        <div className="container">
+          <div className="row">
+            {
+              신발정보.map(function (object, index) {
+                return <ShowShoes shoes={object} i={index} />
+
+              })
+            }
           </div>
-          <div className="container">
-            <div className="row">
-              {
-                신발정보.map(function (object, index) {
-                  return <ShowShoes shoes={object} i={index} />
+        </div>
+      </Route>
 
-                })
-              }
-            </div>
-          </div>
-        </Route>
-
-        <Route path="/detail">
-          <Detail />
-        </Route>
-
-        <Route path="/:id">
-          <div>유효하지 않은 URL입니다.</div>
-        </Route>
-      </Switch>
+      <Route path="/detail/:id">{/*detail/뒤에 어떤 문자가 오더라도 detail컴포넌트로 이동*/}
+        <Detail shoesInfo={신발정보} />
+      </Route>
 
 
     </div>
