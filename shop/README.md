@@ -112,5 +112,3 @@ to라는 속성을 이용해서 경로를 적어주면 페이지 이동이 가�
 	2) Detail.js에 파라미터 번호(:id)를 불러오기
 	import { useHistory, useParams } from 'react-router-dom';
 	let { id } = useParams();//:id자리에 사용자가 입력한 값
-
-
