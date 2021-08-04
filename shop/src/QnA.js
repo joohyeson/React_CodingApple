@@ -28,11 +28,11 @@ function QnA() {
 
     return (
 
-        <div className="QnA">
+        <div className="qna">
 
             {
                 글제목.map(function (a, i) {//i는 반복문이 돌 때마다 0,1,2순서대로 증가하는 변수
-                    return (<div className="list">
+                    return (<div className="List">
                         <h3 onClick={() => { 제목번호변경(i) }}>{a} <span onClick={() => { 좋아요변경(좋아요 + 1) }}>👍</span> {좋아요} </h3>
                         <p>2월 17일 발행</p>
                         <hr />{/* 실선 */}
@@ -59,8 +59,8 @@ function QnA() {
 
 function Modal(props) {
     return (
-        <div className="modal">
-            <h2>제목 {props.글제목[props.제목번호]}</h2>
+        <div className="Modal">
+            <h2>{props.글제목[props.제목번호]}</h2>
             <p>날짜</p>
             <p>상세내용</p>
         </div>
