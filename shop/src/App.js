@@ -4,11 +4,13 @@ import { Navbar, Container, Nav, Button } from 'react-bootstrap';
 import { useState } from 'react';
 import shoesInfo from './data.js'
 
-import { Link, Route, Switch } from 'react-router-dom';
+import { Link, Route, Switch, useHistory } from 'react-router-dom';
 import Detail from './Detail';
+import QnA from './QnA'
 
 function App() {
 
+  let history = useHistory();
   let [신발정보, 신발정보변경] = useState(shoesInfo);
 
   return (
@@ -17,9 +19,9 @@ function App() {
         <Container>
           <Navbar.Brand>ShoesShop</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link><Link to="/">Home</Link></Nav.Link>
-            <Nav.Link><Link to="/detail">Detail</Link></Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/detail/0">Detail</Nav.Link>
+            <Nav.Link href="/qna">QnA</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
@@ -44,7 +46,7 @@ function App() {
           <div className="row">
             {
               신발정보.map(function (object, index) {
-                return <ShowShoes shoes={object} i={index} />
+                return <ShowShoes shoes={object} i={index} history={history} />
 
               })
             }
@@ -56,21 +58,28 @@ function App() {
         <Detail shoesInfo={신발정보} />
       </Route>
 
+      <Route path="/qna">{/*detail/뒤에 어떤 문자가 오더라도 detail컴포넌트로 이동*/}
+        <QnA />
+      </Route>
+
 
     </div>
   );
+
+  function ShowShoes(props) {
+    return (
+      <div className="col-md-4">
+        <img src={"https://codingapple1.github.io/shop/shoes" + (props.i + 1) + ".jpg"} width="100%" onClick={() => { history.push("/detail/" + (props.i)) }} />
+        <h4>{props.shoes.title}</h4>
+        <p>{props.shoes.content}</p>
+        <p>{props.shoes.price}</p>
+      </div>
+    )
+  }
+
 }
 
-function ShowShoes(props) {
-  return (
-    <div className="col-md-4">
-      <img src={"https://codingapple1.github.io/shop/shoes" + (props.i + 1) + ".jpg"} width="100%" />
-      <h4>{props.shoes.title}</h4>
-      <p>{props.shoes.content}</p>
-      <p>{props.shoes.price}</p>
-    </div>
-  )
-}
+
 
 
 export default App;
