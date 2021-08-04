@@ -6,6 +6,7 @@ import shoesInfo from './data.js'
 
 import { Link, Route, Switch } from 'react-router-dom';
 import Detail from './Detail';
+import QnA from './QnA'
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/detail/0">Detail</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="/qna">QnA</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
@@ -54,6 +55,10 @@ function App() {
 
       <Route path="/detail/:id">{/*detail/뒤에 어떤 문자가 오더라도 detail컴포넌트로 이동*/}
         <Detail shoesInfo={신발정보} />
+      </Route>
+
+      <Route path="/qna">{/*detail/뒤에 어떤 문자가 오더라도 detail컴포넌트로 이동*/}
+        <QnA />
       </Route>
 
 
