@@ -131,3 +131,45 @@
 	import { useHistory, useParams } from 'react-router-dom';
 	let { id } = useParams();//:id자리에 사용자가 입력한 값
 	```
+
+## 8강 styled-components를 이용한 class없는 CSS스타일링
+
+* styled-components
+
+	컴포넌트가 많아지면 CSS작성에 대한 고민이 많아진다. ex) 실수로 class를 중복으로 만들기도 함. 
+	이러한 문제를 해결하기위해서 class선언 없이 컴포넌트에 직접 CSS를 장착 시켜주는 라이브러리
+
+
+	* 기본 사용 방법
+		
+		1) npm install styled-components 설치
+		2) import styled from 'styled-components'; 
+		3)
+		let 박스 = styled.div`
+    		padding : 20px;
+		`;//역따옴표 주의
+		4) <박스>ㅇㄹ</박스>
+
+	* 추가적인 유용한 사용 방법
+
+		let 제목 = styled.h4`
+		  font-size : 25px;
+		  color : ${ props => props.색상 };
+		`;
+
+		<div>
+      		<HTML 많은 곳/>
+      		<박스>
+        		<제목 색상="blue">안녕하세요1</제목>
+        		<제목 색상={'red'}>안녕하세요2</제목>
+     		</박스>
+   		 </div>
+
+		props를 사용해서 원하는 문자를 전송할 수 있다. 
+
+	* 리액트에서 props를 전송하는 방법
+
+		<제목 색상="blue"></제목>//일반 텍스트 전달
+		<제목 색상={'red'}></제목> //변수나 자료형
+
+	* 다른 사람과 협업을 하는 경우에는 사용하지 않는 게 좋다. (리액트 숙련도를 요구하기 때문)
