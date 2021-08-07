@@ -173,3 +173,75 @@
 		<제목 색상={'red'}></제목> //변수나 자료형
 
 	* 다른 사람과 협업을 하는 경우에는 사용하지 않는 게 좋다. (리액트 숙련도를 요구하기 때문)
+
+## 9강 아니면 CSS대신 SASS를 쓰자 (SASS 문법 10분 총정리)
+
+	* SASS
+		CSS를 프로그래밍 언어스럽게 작성하기 위한 Preprocessor
+		브라우저는 SASS문법을 모르기 때문에 다시 CSS로 컴파일해야한다. 이 일을 하는 라이브러리:
+		npm install node-sass
+
+	* 적용 방법
+		Detail.css가 아닌 Detail.scss로 사용
+	
+	* 변수 선언 및 사용
+
+		$메인컬러 : #ff0000;
+
+		.red {
+			color : $메인컬러;
+		}
+
+	* 다른 파일 import
+
+		@import './reset.scss'
+
+	* nesting
+
+		div.container{
+			h4{
+				color: blue;
+			}
+
+			p{
+				color: green;
+			}
+		}//sass 문법
+
+		div.container h4{
+			color: blue;
+		}//css 문법
+
+	* @extend
+
+		.my-alert {
+			background : #eeeeee;
+			padding : 15px;
+			border-radius : 5px;
+			max-width : 500px;
+			width : 100%;
+			margin : auto;
+		}
+
+		.my-alert-red {
+			@extend .my-alert;
+			background: #ffe591;
+		}
+
+	* @mixin/@include
+
+		@mixin 함수() {
+			background : #eeeeee;
+			padding : 15px;
+			border-radius : 5px;
+			max-width : 500px;
+			width : 100%;
+			margin : auto;
+		}
+		.my-alert {
+			@include 함수()
+		}
+
+		.my-alert p {
+			margin-bottom : 0;
+		}
