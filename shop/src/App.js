@@ -14,6 +14,15 @@ function App() {
   let history = useHistory();
   let [신발정보, 신발정보변경] = useState(shoesInfo);
 
+  function 신발추가(props) {
+    let temp = [...신발정보];
+
+    for (let i = 0; i < 3; i++) {
+      temp.push(props.data[i]);
+    }
+
+    신발정보변경(temp);
+  }
   return (
     <div className="App">
       <Navbar bg="dark" variant="dark">
@@ -55,8 +64,8 @@ function App() {
           <div>
             <Button variant="dark" onClick={() => {
               axios.get('https://codingapple1.github.io/shop/data2.json')
-                .then(() => {
-
+                .then((result) => {
+                  신발추가(result);
                 })
                 .catch(() => {
 
