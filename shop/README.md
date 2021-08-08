@@ -300,5 +300,30 @@
 					//2빠로 실행할 코드 
 				});//순서대로 실행됨
 
+## 11강 useEffect 숙제 풀이 & 나머지 기능
+
+	* 특정 state가 변경될 때만 실행하는 방법
+
+		업데이트가 될 때마다 실행되기 때문에 의도하지 않은 경우에도 실행될 수 있다. 
+		조건안에 아무것도 없으면 처음에 생성될 때만 실행된다. []
+
+		let [알림, 알림변경] = useState(true);
+		useEffect(()=>{
+					
+			기능작성
+					
+		}, [알림]);//alert
+
+	* setTimeout 사용시 주의점
+
+		useEffect(()=>{
+			let 타이머 = setTimeout(()=>{ alert변경(false) }, 2000);
+
+			return ()=>{ clearTimeout(타이머) }
+		}, []);
+
+		컴포넌트가 사라질 때 clearTimeout을 해줘야함. 
+
+
 
 
