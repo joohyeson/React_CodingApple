@@ -29,10 +29,10 @@ https://online.codingapple.com/course/react-basic/
 - [X] React Router 1 : 셋팅과 기본 라우팅		
 - [X] React Router 2 : Link, Switch, history 기능		
 - [X] React Router 3 : URL 파라미터로 상세페이지 100개 만들기		
-- [ ] styled-components를 이용한 class없는 CSS스타일링			
-- [ ] 아니면 CSS대신 SASS를 쓰자 (SASS 문법 10분 총정리)	
-- [ ] Lifecycle Hook (옛날사람) useEffect (요즘사람)		
-- [ ] useEffect 숙제 풀이 & 나머지 기능		
-- [ ] 리액트에서의 Ajax 요청방법 & Ajax는 무엇인가		
-- [ ] 리액트에서의 Ajax 요청방법 2 & 숙제풀이		
+- [X] styled-components를 이용한 class없는 CSS스타일링			
+- [X] 아니면 CSS대신 SASS를 쓰자 (SASS 문법 10분 총정리)	
+- [X] Lifecycle Hook (옛날사람) useEffect (요즘사람)		
+- [X] useEffect 숙제 풀이 & 나머지 기능		
+- [X] 리액트에서의 Ajax 요청방법 & Ajax는 무엇인가		
+- [X] 리액트에서의 Ajax 요청방법 2 & 숙제풀이		
 - [ ] Component를 3개 중첩해서 만들면 state 전달은 어떻게 하죠?
