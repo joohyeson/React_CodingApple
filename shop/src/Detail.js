@@ -20,11 +20,11 @@ function Detail(props) {
     });//id로 상품 검색해서 보여주는 기능
 
     let history = useHistory();
-    let [알림, 알림변경] = useState(false);
+    let [알림, 알림변경] = useState(true);
     useEffect(() => {
         //2초 후에 alert창이 보이지 않게
         setTimeout(() => {
-            알림변경(true);
+            알림변경(false);
         }, 2000);
     });
 
@@ -33,9 +33,14 @@ function Detail(props) {
             <박스>
                 <제목 className="red">Detail</제목>
             </박스>
-            <div className="my-alert" hidden={알림}>
-                <p>재고가 얼마 남지 않았습니다.</p>
-            </div>
+            {
+                알림 === true
+                    ? (<div className="my-alert">
+                        <p>재고가 얼마 남지 않았습니다.</p>
+                    </div>)
+                    : null
+            }
+
             <div className="row">
                 <div className="col-md-6">
                     <img src={"https://codingapple1.github.io/shop/shoes" + (찾은상품.id + 1) + ".jpg"} width="100%" />
