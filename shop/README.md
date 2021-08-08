@@ -346,4 +346,16 @@
 				}}>더보기</button>
 
 
+## 13강 리액트에서의 Ajax 요청방법 2 & 숙제풀이
+
+	* POST
+		서버에 데이터를 보낼 때 사용
+
+		axios.post('https://codingapple1.github.io/shop/data2.json', { id : 'test', pw : 1234})
+		.then((result)=>{  })
+		.catch(()=>{ })
+
+
+
+
 
