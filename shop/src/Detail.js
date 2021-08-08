@@ -55,7 +55,6 @@ function Detail(props) {
                     }}>뒤로가기</button>
                 </div>
             </div>
-
         </div>
     )
 }

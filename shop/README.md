@@ -324,6 +324,26 @@
 
 		컴포넌트가 사라질 때 clearTimeout을 해줘야함. 
 
+## 12강 리액트에서의 Ajax 요청방법 & Ajax는 무엇인가 
+
+	* GET 요청: 특정 페이지/자료 읽기
+	* POST 요청: 서버로 중요한 정보 전달
+	* Ajax
+		서버에 새로고침없이 요청을 할 수 있게 도와준다.
+		GET/POST는 요청을 할 때마다 새로고침 됨.
+
+		1) jQuery에서 $.ajax()
+		2) 자바스크립트 fetch()
+		3) axios에서 axios.get()
+			리액트에서 가장 많이 사용함. json파일을 그대로 가져오는게 아니라 오브젝트화해서 가져와줌.
+
+			    <button className="btn btn-primary" onClick={()=>{
+
+					axios.get('https://codingapple1.github.io/shop/data2.json')
+					.then((첫번째 인자 : 가져온 자료)=>{ 요청성공시실행할코드 })
+					.catch(()=>{ 요청실패시실행할코드 })
+
+				}}>더보기</button>
 
 
 

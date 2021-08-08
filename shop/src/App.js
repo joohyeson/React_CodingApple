@@ -6,7 +6,8 @@ import shoesInfo from './data.js'
 
 import { Link, Route, Switch, useHistory } from 'react-router-dom';
 import Detail from './Detail';
-import QnA from './QnA'
+import QnA from './QnA';
+import axios from 'axios';
 
 function App() {
 
@@ -50,6 +51,17 @@ function App() {
 
               })
             }
+          </div>
+          <div>
+            <Button variant="dark" onClick={() => {
+              axios.get('https://codingapple1.github.io/shop/data2.json')
+                .then(() => {
+
+                })
+                .catch(() => {
+
+                })
+            }}>더보기</Button>{' '}
           </div>
         </div>
       </Route>
