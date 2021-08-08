@@ -35,4 +35,4 @@ https://online.codingapple.com/course/react-basic/
 - [X] useEffect 숙제 풀이 & 나머지 기능		
 - [X] 리액트에서의 Ajax 요청방법 & Ajax는 무엇인가		
 - [X] 리액트에서의 Ajax 요청방법 2 & 숙제풀이		
-- [ ] Component를 3개 중첩해서 만들면 state 전달은 어떻게 하죠?
+- [X] Component를 3개 중첩해서 만들면 state 전달은 어떻게 하죠?
