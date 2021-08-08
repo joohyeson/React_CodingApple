@@ -245,3 +245,60 @@
 		.my-alert p {
 			margin-bottom : 0;
 		}
+
+
+## 10강 Lifecycle Hook (옛날사람) useEffect (요즘사람)
+
+	* Link의 warning 해결 방법
+
+		<Nav.Link as={Link} to="/">Home</Nav.Link>
+
+	* Lifecycle Hook
+
+		hook을 사용해서 컴포넌트의 생애주기 중간중간에 명령을 내릴 수 있다.
+		ex) 생성 되기 전에/ 업데이트 되기 전에/삭제되기 전에 등등..
+
+		* class 컴포넌트 Hook
+
+			componentDidMout()//컴포넌트 생성직후 실행할 코드
+			componentWillUnmount()//컴포넌트가 사라지기 직전 실행할 코드
+
+		* function 컴포넌트 Hook
+
+			* 컴포넌트 생성 직후 실행할 코드
+				useEffect(()=>{
+					
+					기능작성
+					
+					});//컴포넌트가 mount되었을 때, update 될 때 특정 코드를 실행시킴.	
+				
+				let [알림, 알림변경] = useState(false);
+				useEffect(() => {
+					//2초 후에 alert창이 보이지 않게
+					setTimeout(() => {
+						알림변경(true);
+					}, 2000);
+				});
+
+				<div className="my-alert" hidden={알림}>
+					<p>재고가 얼마 남지 않았습니다.</p>
+				</div>
+			
+			* 컴포넌트 삭제 직전 실행할 코드
+
+				useEffect(()=>{
+				
+					return function 어쩌구(){ 실행할 코드 } 
+				});
+
+			* 여러개를 사용하고 싶을 때
+
+				useEffect(()=>{
+					//1빠로 실행할 코드
+				});
+				useEffect(()=>{
+					//2빠로 실행할 코드 
+				});//순서대로 실행됨
+
+
+

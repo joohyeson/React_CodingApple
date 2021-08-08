@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import './Detail.scss';
@@ -20,13 +20,20 @@ function Detail(props) {
     });//id로 상품 검색해서 보여주는 기능
 
     let history = useHistory();
+    let [알림, 알림변경] = useState(false);
+    useEffect(() => {
+        //2초 후에 alert창이 보이지 않게
+        setTimeout(() => {
+            알림변경(true);
+        }, 2000);
+    });
 
     return (
         <div className="container">
             <박스>
                 <제목 className="red">Detail</제목>
             </박스>
-            <div className="my-alert">
+            <div className="my-alert" hidden={알림}>
                 <p>재고가 얼마 남지 않았습니다.</p>
             </div>
             <div className="row">
