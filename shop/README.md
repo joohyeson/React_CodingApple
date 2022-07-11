@@ -1,5 +1,13 @@
 # REACT_CODINGAPPLE 실습
 
+실제 페이지: https://joohyeson.github.io/React_CodingApple/
+
+![image](https://user-images.githubusercontent.com/68503845/178377124-0987cff7-48f5-4120-b9a6-defa1df13a4e.png)
+
+![image](https://user-images.githubusercontent.com/68503845/178377116-b86fdf89-c4b3-448d-ad6c-27fbbea8257f.png)
+
+
+
 ## 1강 쇼핑몰 프로젝트 : 프로젝트 생성 & Bootstrap 설치
 
 * yarn
