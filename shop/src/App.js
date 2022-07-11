@@ -20,15 +20,15 @@ function App() {
         <Container>
           <Navbar.Brand>ShoesShop</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/detail/0">Detail</Nav.Link>
-            <Nav.Link as={Link} to="/qna">QnA</Nav.Link>
+            <Nav.Link as={Link} to={`${process.env.PUBLIC_URL}/`}>Home</Nav.Link>
+            <Nav.Link as={Link} to={`${process.env.PUBLIC_URL}/detail/0`}>Detail</Nav.Link>
+            <Nav.Link as={Link} to={`${process.env.PUBLIC_URL}/qna`}>QnA</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
 
 
-      <Route exact path="/">
+      <Route exact path={`${process.env.PUBLIC_URL}/`}>
         <div className="jumbotron">
           <br />
           <h1>20% Seaon Off</h1>
@@ -66,11 +66,11 @@ function App() {
         </div>
       </Route>
 
-      <Route path="/detail/:id">{/*detail/뒤에 어떤 문자가 오더라도 detail컴포넌트로 이동*/}
+      <Route path={`${process.env.PUBLIC_URL}/`+"detail/:id"}>{/*detail/뒤에 어떤 문자가 오더라도 detail컴포넌트로 이동*/}
         <Detail shoesInfo={신발정보} />
       </Route>
 
-      <Route path="/qna">{/*detail/뒤에 어떤 문자가 오더라도 detail컴포넌트로 이동*/}
+      <Route path={`${process.env.PUBLIC_URL}/`+"qna"}>{/*detail/뒤에 어떤 문자가 오더라도 detail컴포넌트로 이동*/}
         <QnA />
       </Route>
 
@@ -81,7 +81,7 @@ function App() {
   function ShowShoes(props) {
     return (
       <div className="col-md-4">
-        <img src={"https://codingapple1.github.io/shop/shoes" + (props.i + 1) + ".jpg"} width="100%" onClick={() => { history.push("/detail/" + (props.i)) }} />
+        <img src={"https://codingapple1.github.io/shop/shoes" + (props.i + 1) + ".jpg"} width="100%" onClick={() => { history.push(`${process.env.PUBLIC_URL}`+"/detail/" + (props.i)) }} />
         <h4>{props.shoes.title}</h4>
         <p>{props.shoes.content}</p>
         <p>{props.shoes.price}</p>
