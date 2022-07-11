@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/React_CodingApple/static/css/main.d08c2c45.chunk.css",
-    "main.js": "/React_CodingApple/static/js/main.2b60d56a.chunk.js",
-    "main.js.map": "/React_CodingApple/static/js/main.2b60d56a.chunk.js.map",
+    "main.js": "/React_CodingApple/static/js/main.309e9ae1.chunk.js",
+    "main.js.map": "/React_CodingApple/static/js/main.309e9ae1.chunk.js.map",
     "runtime-main.js": "/React_CodingApple/static/js/runtime-main.d7a8a964.js",
     "runtime-main.js.map": "/React_CodingApple/static/js/runtime-main.d7a8a964.js.map",
     "static/js/2.f59c585f.chunk.js": "/React_CodingApple/static/js/2.f59c585f.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.d7a8a964.js",
     "static/js/2.f59c585f.chunk.js",
     "static/css/main.d08c2c45.chunk.css",
-    "static/js/main.2b60d56a.chunk.js"
+    "static/js/main.309e9ae1.chunk.js"
   ]
 }
